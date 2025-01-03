@@ -8,7 +8,6 @@ const withRoleGuard = (allowedRoles) => (WrappedComponent) => {
     const useRole = globalData?.role;
     const hasAllowedRole = allowedRoles?.includes(useRole);
 
-    console.log("props", props);
     if (!hasAllowedRole) {
       return <Navigate to="/unauthorized" replace />;
     }

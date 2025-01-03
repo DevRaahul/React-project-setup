@@ -6,6 +6,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import withRoleGuard from "./withRoleGuard";
 import UserPage from "../pages/UserPage";
 import UnauthorizedView from "../pages/UnauthorizedView";
+import ReduxCounter from "../pages/ReduxCounter";
+import TypeAheadComponent from "../pages/TypeAheadComponent";
 
 const AdminDashboard = withRoleGuard(["admin"])(AdminPage);
 const UserPageView = withRoleGuard(["user"])(UserPage);
@@ -20,6 +22,8 @@ const AppRoute = () => {
             <Route path="/adminDashboard" element={<AdminDashboard />} />
             <Route path="/userView" element={<UserPageView />} />
             <Route path="/unauthorized" element={<UnauthorizedView />} />
+            <Route path="/reduxCounter" element={<ReduxCounter />} />
+            <Route path="/typeAheadDemo" element={<TypeAheadComponent />} />
           </Route>
           <Route path="/login" element={<LoginPage />} />
         </Routes>

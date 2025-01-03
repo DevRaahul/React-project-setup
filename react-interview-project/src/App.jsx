@@ -4,13 +4,11 @@ import AppRoute from "./routes/AppRoute";
 
 function App() {
   return (
-    <>
-      <ErrorBoundary>
-        <GlobalContextProvider>
-          <AppRoute />
-        </GlobalContextProvider>
-      </ErrorBoundary>
-    </>
+    <ErrorBoundary>
+      <GlobalContextProvider>
+        <AppRoute />
+      </GlobalContextProvider>
+    </ErrorBoundary>
   );
 }
 

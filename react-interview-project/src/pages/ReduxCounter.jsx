@@ -6,7 +6,7 @@ const ReduxCounter = () => {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   return (
-    <>
+    <div>
       <div>
         <div>RTK Counter example</div>
         <div>{count}</div>
@@ -16,7 +16,7 @@ const ReduxCounter = () => {
       <div>
         <ShowCount />
       </div>
-    </>
+    </div>
   );
 };
 

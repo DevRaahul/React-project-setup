@@ -6,11 +6,11 @@ const ShowCount = () => {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   return (
-    <>
+    <div>
       <div>{count}</div>
       <button onClick={() => dispatch(increment())}>Add</button>
       <button onClick={() => dispatch(increment())}>Reduce</button>
-    </>
+    </div>
   );
 };
 

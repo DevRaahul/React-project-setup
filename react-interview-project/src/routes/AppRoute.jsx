@@ -13,20 +13,18 @@ const UserPageView = withRoleGuard(["user"])(UserPage);
 
 const AppRoute = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<ProtectedRoute />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/adminDashboard" element={<AdminDashboard />} />
-            <Route path="/userView" element={<UserPageView />} />
-            <Route path="/unauthorized" element={<UnauthorizedView />} />
-            <Route path="/reduxCounter" element={<ReduxCounter />} />
-          </Route>
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/adminDashboard" element={<AdminDashboard />} />
+          <Route path="/userView" element={<UserPageView />} />
+          <Route path="/reduxCounter" element={<ReduxCounter />} />
+          <Route path="/unauthorized" element={<UnauthorizedView />} />
+        </Route>
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

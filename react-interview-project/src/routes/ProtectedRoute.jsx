@@ -3,6 +3,7 @@ import { useGlobalContext } from "../context/GlobalContext";
 import { useEffect } from "react";
 
 const ProtectedRoute = () => {
+  debugger;
   const [globalData, updateGlobalData] = useGlobalContext();
   const navigate = useNavigate();
 
